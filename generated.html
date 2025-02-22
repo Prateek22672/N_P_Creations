@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Website</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script defer src="generate.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 id="websiteTitle" class="text-center"></h2>
+        <div id="websiteContent"></div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get("category");
+
+    const websiteTitle = document.getElementById("websiteTitle");
+    const websiteContent = document.getElementById("websiteContent");
+
+    if (category === "food") {
+        websiteTitle.innerText = "Welcome to Your Food Website!";
+        websiteContent.innerHTML = `
+            <h3>Delicious Recipes</h3>
+            <p>Explore the best food recipes curated for you.</p>
+            <img src="https://source.unsplash.com/600x400/?food" class="img-fluid">
+        `;
+    } else if (category === "shopping") {
+        websiteTitle.innerText = "Your Shopping Site is Ready!";
+        websiteContent.innerHTML = `
+            <h3>Latest Fashion Trends</h3>
+            <p>Browse and shop the latest fashion trends.</p>
+            <img src="Ad" class="img-fluid">
+        `;
+    } else if (category === "portfolio") {
+        websiteTitle.innerText = "Your Portfolio is Live!";
+        websiteContent.innerHTML = `
+            <h3>Showcase Your Work</h3>
+            <p>A simple yet effective portfolio to display your projects.</p>
+            <img src="https://source.unsplash.com/600x400/?portfolio" class="img-fluid">
+        `;
+    } else {
+        websiteTitle.innerText = "Website Not Found";
+        websiteContent.innerHTML = `<p>Invalid category selected.</p>`;
+    }
+});
+
+</script>
+</html>
