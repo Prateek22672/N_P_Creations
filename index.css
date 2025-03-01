@@ -60,7 +60,9 @@
 
 body {
     margin: 0;
-    background-color: #3c0404;
+background: linear-gradient(135deg, #000000, #3B0E0E);
+background: linear-gradient(135deg, #1F1C2C, #928DAB);
+
 
 }
 
@@ -73,18 +75,6 @@ body {
 }
 
 
-.xv {
-    width: 20px;
-    margin-top: -38.9px;
-    margin-left: -180px;
-}
-
-.cloud {
-    font-size: 23px;
-    margin-top: -15px;
-    margin-left: -140px;
-    color: white;
-}
 
 .wrapper {
     position: relative;
