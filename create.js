@@ -124,3 +124,22 @@ function removeExistingButton() {
     existingButton.remove();
   }
 }
+
+// Utility function to create a button dynamically with custom styles
+function createButton(text, callback) {
+  let dropdownContainer = document.getElementById("dropdownContainer");
+
+  let button = document.createElement("button");
+  button.classList.add("btn", "mt-2"); // Keep Bootstrap spacing class
+  button.textContent = text;
+  button.id = "actionButton";
+  button.style.backgroundColor = "black"; // Set black background
+  button.style.color = "white"; // Set white text
+  button.style.border = "none"; // Remove default border
+  button.style.padding = "10px 20px"; // Add padding for better appearance
+  button.style.cursor = "pointer"; // Make it look clickable
+
+  button.onclick = callback; // Assign the function
+
+  dropdownContainer.appendChild(button);
+}
