@@ -277,6 +277,20 @@ nav .desktop-nav {
 /*------------*-_-*---------------*/
 
 
+#myButton {
+    position: relative;
+    left: 95px;
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+#splash-screen {
+    transition: opacity 1s ease-in-out;
+}
 
 /*------------*-_-*---------------*/
 
@@ -327,4 +341,3 @@ nav .desktop-nav {
     font-size: 14px;
     font-weight: 300;
 }
-
