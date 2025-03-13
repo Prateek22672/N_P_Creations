@@ -67,11 +67,11 @@ function addSubjectDropdown() {
         <label for="subjectDropdown" class="form-label">Select Subject:</label>
         <select class="form-select mb-2" id="subjectDropdown">
             <option value="">Choose...</option>
-            <option value="maths">Computer Networks</option>
-            <option value="physics">Data Structures</option>
-            <option value="chemistry">COA</option>
-            <option value="cs">OE</option>
-            <option value="eng">Operating System</option>
+            <option value="Computer Networks">Computer Networks</option>
+            <option value="Data Structures">Data Structures</option>
+            <option value="COA">COA</option>
+            <option value="OE">OE</option>
+            <option value="Operating System">Operating System</option>
         </select>
     `;
 
