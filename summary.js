@@ -1,14 +1,17 @@
-// Splash screen logic
-const splashScreen = document.getElementById("splash-screen");
-splashScreen.style.display = "flex"; // Show splash screen
+document.addEventListener("DOMContentLoaded", () => {
+  const splashScreen = document.getElementById("splash-screen");
+  if (splashScreen) {
+    splashScreen.style.display = "flex"; 
 
-setTimeout(() => {
-  splashScreen.style.opacity = "0"; // Start fading out
-  setTimeout(() => {
-    splashScreen.style.display = "none"; // Hide splash screen
-  }, 1000); // Duration for fade-out transition
-}, 1600); // Duration to show splash screen
+    setTimeout(() => {
+      splashScreen.style.opacity = "0";
+      setTimeout(() => {
+        splashScreen.style.display = "none";
+      }, 1000);
+    }, 1600);
+  }
 
-document.getElementById("year").innerText = localStorage.getItem("selectedYear") || "Not selected";
-        document.getElementById("semester").innerText = localStorage.getItem("selectedSemester") || "Not selected";
-        document.getElementById("subject").innerText = localStorage.getItem("selectedSubject") || "Not selected";
+  document.getElementById("year").innerText = localStorage.getItem("selectedYear") || "Not selected";
+  document.getElementById("semester").innerText = localStorage.getItem("selectedSemester") || "Not selected";
+  document.getElementById("subject").innerText = localStorage.getItem("selectedSubject") || "Not selected";
+});
